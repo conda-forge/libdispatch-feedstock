@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - lld  # [win]
-    - sysroot_linux-64 2.17  # [linux64]
+    - {{ stdlib("c") }}
     - cmake
     - ninja
 
