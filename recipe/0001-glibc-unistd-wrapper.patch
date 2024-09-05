@@ -85,3 +85,15 @@ index 6bf825a..fd0d75e 100644
  #include <sys/syscall.h>   /* For SYS_xxx definitions */
  
  typedef uint32_t dispatch_tid;
+diff --git a/dispatch/CMakeLists.txt b/dispatch/CMakeLists.txt
+index a7f5fc3..1feeb6b 100644
+--- a/dispatch/CMakeLists.txt
++++ b/dispatch/CMakeLists.txt
+@@ -24,6 +24,7 @@ install(FILES
+           semaphore.h
+           source.h
+           time.h
++          unistd.h
+         DESTINATION
+           "${INSTALL_DISPATCH_HEADERS_DIR}")
+ if(ENABLE_SWIFT)
