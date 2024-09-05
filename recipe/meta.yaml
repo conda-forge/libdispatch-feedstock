@@ -12,7 +12,7 @@ source:
     - 0001-glibc-unistd-wrapper.patch  # [linux]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx]
   run_exports:
     - {{ pin_subpackage(name) }}
@@ -30,6 +30,7 @@ test:
   commands:
     - test -f $PREFIX/lib/libdispatch${SHLIB_EXT}  # [not win]
     - if not exist %LIBRARY_LIB%\\dispatch.lib exit 1  # [win]
+    - test -f $PREFIX/include/dispatch/unistd.h  # [linux]
 
 about:
   home: https://github.com/apple/swift-corelibs-libdispatch
