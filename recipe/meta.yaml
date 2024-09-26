@@ -12,7 +12,7 @@ source:
     - 0001-glibc-unistd-wrapper.patch  # [linux]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [osx]
   run_exports:
     - {{ pin_subpackage(name) }}
