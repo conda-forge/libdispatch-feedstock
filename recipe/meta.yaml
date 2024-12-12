@@ -1,5 +1,5 @@
 {% set name = "libdispatch" %}
-{% set version = "6.0.2" %}
+{% set version = "6.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/apple/swift-corelibs-libdispatch/archive/refs/tags/swift-{{ version }}-RELEASE.tar.gz
-  sha256: 3df429b22d9294c0ca5291c86e83a35f6326600a1c271933107bba199b919008
+  sha256: 444c0de5fe18e148548a3f3b60b3bac3d4d586285c21064346c7ca17ed1d4fac
   patches:
     - 0001-glibc-unistd-wrapper.patch  # [linux]
 
