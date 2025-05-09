@@ -3,15 +3,15 @@ About libdispatch-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libdispatch-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/apple/swift-corelibs-libdispatch
+Home: https://github.com/swiftlang/swift-corelibs-libdispatch
 
 Package license: Apache-2.0
 
 Summary: Comprehensive support for concurrent code execution on multicore hardware
 
-Development: https://github.com/apple/swift-corelibs-libdispatch
+Development: https://github.com/swiftlang/swift-corelibs-libdispatch
 
-Documentation: https://apple.github.io/swift-corelibs-libdispatch
+Documentation: https://swiftlang.github.io/swift-corelibs-libdispatch/
 
 The libdispatch Project, (a.k.a. Grand Central Dispatch), for concurrency on multicore hardware
 
