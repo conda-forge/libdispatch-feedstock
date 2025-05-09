@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/apple/swift-corelibs-libdispatch/archive/refs/tags/swift-{{ version }}-RELEASE.tar.gz
+  url: https://github.com/swiftlang/swift-corelibs-libdispatch/archive/refs/tags/swift-{{ version }}-RELEASE.tar.gz
   sha256: 5bba8d7442890f7dbd37a9245340c5bb0c4c924dee6180ba30385b24e3fdf121
   patches:
     - 0001-glibc-unistd-wrapper.patch  # [linux]
@@ -33,13 +33,13 @@ test:
     - test -f $PREFIX/include/dispatch/unistd.h  # [linux]
 
 about:
-  home: https://github.com/apple/swift-corelibs-libdispatch
+  home: https://github.com/swiftlang/swift-corelibs-libdispatch
   license: Apache-2.0
   license_file: LICENSE
   summary: 'Comprehensive support for concurrent code execution on multicore hardware'
   description: 'The libdispatch Project, (a.k.a. Grand Central Dispatch), for concurrency on multicore hardware'
-  doc_url: https://apple.github.io/swift-corelibs-libdispatch
-  dev_url: https://github.com/apple/swift-corelibs-libdispatch
+  doc_url: https://swiftlang.github.io/swift-corelibs-libdispatch/
+  dev_url: https://github.com/swiftlang/swift-corelibs-libdispatch
 
 extra:
   recipe-maintainers:
