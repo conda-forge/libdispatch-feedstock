@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/swiftlang/swift-corelibs-libdispatch/archive/refs/tags/swift-{{ version }}-RELEASE.tar.gz
