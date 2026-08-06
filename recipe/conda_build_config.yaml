@@ -1,10 +1,14 @@
 c_compiler:
   - vs2022                     # [win]
-  - clang                      # [linux]
+  - clang                      # [linux and not riscv64]
+  - gcc                        # [linux and riscv64]
 c_compiler_version:
-  - 17                         # [linux]
+  - 17                         # [linux and not riscv64]
+  - 15                         # [linux and riscv64]
 cxx_compiler:
   - vs2022                     # [win]
-  - clangxx                    # [linux]
+  - clangxx                    # [linux and not riscv64]
+  - gxx                        # [linux and riscv64]
 cxx_compiler_version:
-  - 17                         # [linux]
+  - 17                         # [linux and not riscv64]
+  - 15                         # [linux and riscv64]
