@@ -38,13 +38,12 @@ requirements:
       then: clang-17 17.*
 
 tests:
-  - script:
-      - if: not win
-        then: test -f $PREFIX/lib/libdispatch${SHLIB_EXT}
-      - if: win
-        then: if not exist %LIBRARY_LIB%\dispatch.lib exit 1
-      - if: linux
-        then: test -f $PREFIX/include/dispatch/unistd.h
+  - package_contents:
+      lib:
+        - dispatch
+      include:
+        - if: linux
+          then: dispatch/unistd.h
 
 about:
   homepage: https://github.com/swiftlang/swift-corelibs-libdispatch
