@@ -3,6 +3,8 @@
 set -ex
 
 if [[ "$target_platform" == "linux-riscv64" ]]; then
+    CFLAGS="${CFLAGS//-fno-merge-constants/}"
+    CXXFLAGS="${CXXFLAGS//-fno-merge-constants/}"
     CMAKE_ARGS+=" -D CMAKE_C_COMPILER=$BUILD_PREFIX/bin/clang-17 -D CMAKE_CXX_COMPILER=$BUILD_PREFIX/bin/clang-17 -D CMAKE_C_COMPILER_TARGET=$CONDA_TOOLCHAIN_HOST -D CMAKE_CXX_COMPILER_TARGET=$CONDA_TOOLCHAIN_HOST -D CMAKE_SYSROOT=$CONDA_BUILD_SYSROOT"
 fi
 
