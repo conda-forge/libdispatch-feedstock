@@ -19,8 +19,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}        # [not linux]
+    - {{ compiler('cxx') }}      # [not linux]
+    - {{ compiler('clang') }}    # [linux]
+    - {{ compiler('clangxx') }}  # [linux]
     - lld  # [win]
     - {{ stdlib("c") }}
     - cmake
