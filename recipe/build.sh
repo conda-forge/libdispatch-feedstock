@@ -2,6 +2,12 @@
 
 set -ex
 
+# https://github.com/conda-forge/libdispatch-feedstock/pull/21#issuecomment-5374865695
+if [[ "$target_platform" == "linux-ppc64le" ]]; then
+  CFLAGS="$(echo $CFLAGS | sed 's/-fno-plt //g')"
+  CXXFLAGS="$(echo $CXXFLAGS | sed 's/-fno-plt //g')"
+fi
+
 cmake ${CMAKE_ARGS} \
     -G Ninja \
     -B build \
