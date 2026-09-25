@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: libdispatch
-  version: "6.3.3"
+  version: "6.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,13 +10,13 @@ package:
 
 source:
   url: https://github.com/swiftlang/swift-corelibs-libdispatch/archive/refs/tags/swift-${{ version }}-RELEASE.tar.gz
-  sha256: c3a61c08387937622a291e08e64eb4ec0be07f1df252574552641129057951bb
+  sha256: af15fcc3da4514def6454ed672b82daa9ac1d40cb1d08fb69a6611cb8fc104c6
   patches:
     - if: linux
       then: 0001-glibc-unistd-wrapper.patch
 
 build:
-  number: 1
+  number: 0
   skip: osx
 
 requirements:
